@@ -12,7 +12,7 @@ FILES=$(find test -type f -name "*.txt" | tr '\n' ' ')
 CMD="echo \"foo\" | tee $FILES"
 eval $CMD
 
-fr test foo bar
+sudo fr test foo bar
 
 CHECK=$(cat test/file{1..2}.txt | uniq)
 if [ "$CHECK" != "bar" ]; then
@@ -24,7 +24,7 @@ fi
 
 eval $CMD
 
-fr test foo bar -d
+sudo fr test foo bar -d
 
 CHECK=$(find . -type f -name "*.txt" -exec cat {} \; | uniq)
 if [ "$CHECK" != "bar" ]; then
@@ -34,7 +34,7 @@ fi
 
 eval $CMD
 
-fr test foo bar --deep
+sudo fr test foo bar --deep
 
 CHECK=$(find . -type f -name "*.txt" -exec cat {} \; | uniq)
 if [ "$CHECK" != "bar" ]; then
@@ -51,7 +51,7 @@ EFILES=$(find test -type f -name "*.js" | tr '\n' ' ')
 ECMD="echo \"foo\" | tee $EFILES"
 eval $ECMD
 
-fr test foo bar -e js
+sudo fr test foo bar -e js
 
 CHECK=$(cat test/file{1..2}.txt | uniq)
 ECHECK=$(cat test/index.js)
@@ -63,7 +63,7 @@ fi
 eval $CMD
 eval $ECMD
 
-fr test foo bar --extension js
+sudo fr test foo bar --extension js
 
 CHECK=$(cat test/file{1..2}.txt | uniq)
 ECHECK=$(cat test/index.js)
@@ -77,7 +77,7 @@ fi
 eval $CMD
 eval $ECMD
 
-fr test foo bar --extension js --deep
+sudo fr test foo bar --extension js --deep
 
 CHECK=$(find . -type f -name "*.txt" -exec cat {} \; | uniq)
 ECHECK=$(find . -type f -name "*.js" -exec cat {} \; | uniq)
@@ -89,7 +89,7 @@ fi
 eval $CMD
 eval $ECMD
 
-fr test foo bar -e js -d
+sudo fr test foo bar -e js -d
 
 CHECK=$(find . -type f -name "*.txt" -exec cat {} \; | uniq)
 ECHECK=$(find . -type f -name "*.js" -exec cat {} \; | uniq)
