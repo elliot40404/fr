@@ -4,6 +4,7 @@ if [ -z "$CHECK" ]; then
     echo "findAndReplace not found"
     git clone https://github.com/elliot40404/fr.git
     cd fr
+    chmod +x findAndReplace.sh
     sudo ln -s $(pwd)/findAndReplace.sh /usr/local/bin/fr
 else
     echo "findAndReplace found"
