@@ -2,6 +2,7 @@ CHECK=$(ls | grep "findAndReplace")
 
 if [ -z "$CHECK" ]; then
     echo "findAndReplace not found"
+    cd ~
     git clone https://github.com/elliot40404/fr.git
     cd fr
     chmod +x findAndReplace.sh
