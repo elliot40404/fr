@@ -41,11 +41,11 @@ chmod +x install.sh
 or
 
 ```sh
-curl -o- https://raw.githubusercontent.com/elliot40404/fr/master/install.sh | bash
+sudo curl -o- https://raw.githubusercontent.com/elliot40404/fr/master/install.sh | bash
 ```
 
 ```sh
-wget -qO- https://raw.githubusercontent.com/elliot40404/fr/master/install.sh | bash
+sudo wget -qO- https://raw.githubusercontent.com/elliot40404/fr/master/install.sh | bash
 ```
 
 ## Usage
