@@ -1,0 +1,19 @@
+name: Bash CI
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    name: Checkout repo and test functionality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: run integration tests
+        run: |
+          sudo chmod +x install.sh
+          sudo ./install.sh
+          cd __tests__
+          sudo chmod +x integration_test.sh
+          sudo ./integration_test.sh
