@@ -7,8 +7,12 @@ if [ -z "$CHECK" ]; then
     cd fr
     chmod +x findAndReplace.sh
     sudo ln -s $(pwd)/findAndReplace.sh /usr/local/bin/fr
+    cd /usr/local/bin
+    sudo chmod +x fr
 else
     echo "findAndReplace found"
     echo "Adding to PATH"
     sudo ln -s $(pwd)/findAndReplace.sh /usr/local/bin/fr
+    cd /usr/local/bin
+    sudo chmod +x fr
 fi
