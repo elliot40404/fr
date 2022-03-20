@@ -1,5 +1,10 @@
 # FR - find and replace
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/elliot40404/fr?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/elliot40404/fr/Bash%20CI?style=flat-square)
+![GitHub Repo stars](https://img.shields.io/github/stars/elliot40404/fr?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/elliot40404/fr?style=flat-square)
+
 ```sh
     __________
    / ____/ __ \
@@ -25,9 +30,12 @@ Version: 0.1.0
 
 ## Upcoming features
 
+- [x] Ability to target by filename
 - [x] Ability to exclude directories
 - [x] Ability to exclude files with specific extensions/names
 - [x] Ability to install with package managers
+- [x] Use rust tools if available
+- [x] Ability to use multiple find and replace patterns
 
 ## Installation
 
